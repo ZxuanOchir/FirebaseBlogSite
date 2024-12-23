@@ -1,0 +1,47 @@
+---
+import MainLayout from '../layouts/MainLayout.astro'
+const profileImg = "https://firebasestorage.googleapis.com/v0/b/first-class-blog.appspot.com/o/authors%2Fryanmcm_466x466.png?alt=media&token=fa76477d-7662-47c5-90b2-018cb7585eab"
+---
+
+<MainLayout title="Нүүр хуудас">
+	<div class="profile">
+		<img 
+			src={profileImg}
+			alt="firebaseBlog"
+			class="profile__picture"
+			width="100px"
+			height="100px" />
+
+	<div class="profile__details">
+		<h1>Andrea Wu</h1>
+		<h2>Developer Advocate</h2>
+		<p>
+			Developers worldwide submitted nearly a thousand impressive firebase apps the Gemini API Developer Competiton.
+		</p>
+		</div>
+	</div>
+</MainLayout>
+	
+
+
+<style>
+	.profile{
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		padding: 1rem 0 3rem 0;
+	}
+
+	.profile__details{
+		flex: 1 0 300px;
+	}
+
+	.profile__details > h1 {
+		margin-top: 0;
+	}
+
+	.profile__picture{
+		border-radius: 50%;
+		margin: 0 2rem 1rem 0;
+	}
+</style>
