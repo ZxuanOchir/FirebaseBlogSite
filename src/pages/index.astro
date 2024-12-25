@@ -1,9 +1,12 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
 const profileImg = "https://firebasestorage.googleapis.com/v0/b/first-class-blog.appspot.com/o/authors%2Fryanmcm_466x466.png?alt=media&token=fa76477d-7662-47c5-90b2-018cb7585eab"
+import data from '../data/data.json'
+import Cards from '../components/Cards.astro'
 ---
 
-<MainLayout title="Нүүр хуудас">
+<MainLayout title="Нүүр хуудас" keywords="Эхлэл хуудас">
+	<link slot="css" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 	<div class="profile">
 		<img 
 			src={profileImg}
@@ -12,14 +15,17 @@ const profileImg = "https://firebasestorage.googleapis.com/v0/b/first-class-blog
 			width="100px"
 			height="100px" />
 
-	<div class="profile__details">
+			<div class="profile__details">
 		<h1>Andrea Wu</h1>
 		<h2>Developer Advocate</h2>
 		<p>
 			Developers worldwide submitted nearly a thousand impressive firebase apps the Gemini API Developer Competiton.
 		</p>
-		</div>
+			</div>
 	</div>
+
+	<Cards data={data}/>
+
 </MainLayout>
 	
 

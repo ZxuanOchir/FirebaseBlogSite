@@ -8,6 +8,7 @@ const { keywords = "Гайхалтай блог", title } = Astro.props
 <!doctype html>
 <html lang="en">
 	<head>
+		<slot name="css"/>
 		<meta charset="UTF-8" />
 		<meta name="keywords" content={keywords} />
 		<meta name="viewport" content="width=device-width" />
@@ -27,6 +28,7 @@ const { keywords = "Гайхалтай блог", title } = Astro.props
 	<body>
 		<NavigationBar />
 		<slot />
+		<slot name="sidemenu"/>
 		<Footer />
 	</body>
 </html>

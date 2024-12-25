@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/LearnLayout.astro
+layout: ../layouts/BlogLayout.astro
 image: "/images/DemoDay24BlackOG.png"
 title: "Learn to build and run AI powered apps at Firebase Demo Day ‘24"
 subtitle: "Welcome to Firebase Demo Day 2024!"

@@ -38,4 +38,17 @@ import Toggle from './ThemeToggler.astro'
     a:hover{
         color: var(--grey-900);
     }
+    a.active{
+        background: var(--grey-900);
+        color: var(--background);
+    }
 </style>
+
+<script>
+    const pathname = window.location.pathname;
+    const link = document.querySelector(`nav a[href="${pathname}"]`);
+    //nav a[href="${pathname}"] нь nav элемент дотор байгаа, href аттрибут нь одоогийн pathname-тай яг адилхан байгаа a элементийг хайна.
+    if(link){ //Хэрэв тохирох холбоос олдвол (null биш бол), дараах үйлдлийг гүйцэтгэнэ.
+        link.classList.add('active');
+    }
+</script>
